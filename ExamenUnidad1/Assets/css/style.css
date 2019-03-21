@@ -1,0 +1,29 @@
+.inp{
+	width: 400px;
+}
+
+.parrafos {
+    display: flex;
+    justify-content: center;
+}
+.divInput {
+   
+    text-align: center;
+
+}
+.ClaseImagen{
+	float: left;
+	border-style: double;
+}
+
+.botonComentarios{
+	float: right;
+}
+
+.nuevoDiv{
+	text-align: center;	
+
+}
+.inputComentario{
+	width: 1150px;
+}
