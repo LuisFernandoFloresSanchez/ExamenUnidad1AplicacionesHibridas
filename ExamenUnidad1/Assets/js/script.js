@@ -2,10 +2,7 @@ var NumeroComentarios = [];
 var ContadorBotonesComentarios = 1;
 var iAcumComentarios = 0;
 var oculto = [];
-/*var comentarios = {
-	posicion: 1,
-	comentario: ""
-};*/
+
 //***************************Declaracion de componentes ********************************
 var inputUsuario = document.getElementById("inputUsuario");
 var inputDescripcion = document.getElementById("inputDescripcion");
@@ -13,11 +10,14 @@ var inputImagen = document.getElementById("inputImagen");
 var div1 = document.getElementById("div1");
 
 function guardar() {
+	crearBoton();
+	 var newPar2 = document.createElement("br");
+    div1.appendChild(newPar2);
     crearImagen(inputImagen.value);
     crearParrafos("Usuario:", inputUsuario.value);
     crearParrafos("Descripcion:", inputDescripcion.value);
     crearParrafos("Fecha:", fecha());
-    crearBoton();
+    
     crearComentarios();
     crearLinea();
     inputUsuario.value = "";
@@ -30,6 +30,15 @@ function crearParrafos(cadena, informacion) {
     var node = document.createTextNode(cadena + " " + informacion);
     newPar.appendChild(node);
     newPar.setAttribute("class", "parrafos");
+    if(cadena == "Usuario:"){
+    	newPar.setAttribute("id","usuario");
+    }
+    if(cadena == "Descripcion:"){
+    	newPar.setAttribute("id","descripcion");
+    }
+    if(cadena == "Fecha:"){
+    	newPar.setAttribute("id","fecha");
+    }
     var element = document.getElementById("div1");
     element.appendChild(newPar);
 }
@@ -116,7 +125,7 @@ function clickComentar(iComentarios) {
     var botonComentarios = document.getElementById("botonComentarios" + iComentarios).innerHTML = "Comentarios: (" + NumeroComentarios[iComentarios] + ")";
     var inputComentario = document.getElementById("inputComentario" + iComentarios);
     var newP = document.createElement("p");
-    var node = document.createTextNode("Comentario: " + inputComentario.value);
+    var node = document.createTextNode("Comentario: " + inputComentario.value +" Fecha de publicacion = " +fecha());
     newP.appendChild(node);
     var divComentarioIndividual = document.getElementById("divComentarioIndividual" + iComentarios);
     divComentarioIndividual.appendChild(newP);

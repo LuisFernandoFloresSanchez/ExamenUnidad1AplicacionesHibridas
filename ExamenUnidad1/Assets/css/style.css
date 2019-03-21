@@ -1,29 +1,44 @@
-.inp{
-	width: 400px;
+.inp {
+    width: 400px;
 }
-
 .parrafos {
     display: flex;
     justify-content: center;
 }
 .divInput {
-   
     text-align: center;
-
 }
-.ClaseImagen{
-	float: left;
-	border-style: double;
+.ClaseImagen {
+    float: left;
+    border-style: double;
+    width: 120px;
+    height: 120px;
 }
-
-.botonComentarios{
-	float: right;
+.botonComentarios {
+    float: right;
 }
-
-.nuevoDiv{
-	text-align: center;	
-
+.nuevoDiv {
+    text-align: center;
 }
-.inputComentario{
-	width: 1150px;
+.inputComentario {
+    width: 1150px;
+}
+.labelsIniciales {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+#usuario {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+#descripcion {
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+}
+#fecha {
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 10px;
 }
